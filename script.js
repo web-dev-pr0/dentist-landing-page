@@ -34,7 +34,6 @@ yearSpan.textContent = new Date().getFullYear();
           text: 'Check out this page!',    // Optional message
           url: window.location.href        // Current page URL
         });
-        console.log('Thanks for sharing!');
       } catch (err) {
         console.error('Error sharing:', err);
       }
