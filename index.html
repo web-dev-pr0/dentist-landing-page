@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html class="light" lang="en">
   <head>
     <meta charset="utf-8" />
@@ -73,11 +72,12 @@
           >
         </nav>
         <div class="flex items-center gap-4">
-          <button
+          <a
             class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all"
+            href="#booking"
           >
             Κλείσε Ραντεβού
-          </button>
+          </a>
         </div>
       </div>
     </header>
@@ -103,11 +103,12 @@
               </p>
             </div>
             <div class="flex flex-wrap gap-4">
-              <button
+              <a
                 class="bg-primary text-white px-8 py-4 rounded-lg text-base font-bold hover:shadow-lg hover:shadow-primary/30 transition-all"
+                href="#booking"
               >
                 Κλείσε Ραντεβού
-              </button>
+              </a>
               <button
                 class="border-2 border-[#dbe0e6] dark:border-gray-700 px-8 py-4 rounded-lg text-base font-bold hover:bg-gray-50 dark:hover:bg-gray-800 transition-all flex items-center gap-2"
               >
@@ -460,7 +461,7 @@
           </div>
           <div class="lg:w-1/2 bg-white dark:bg-background-dark p-8 lg:p-12">
             <h3 class="text-2xl font-bold mb-8">Αίτηση Ραντεβού</h3>
-            <form class="space-y-4">
+            <form class="space-y-4" id="booking">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label class="block text-sm font-semibold mb-2"
@@ -521,6 +522,7 @@
               <button
                 class="w-full bg-primary text-white py-4 rounded-lg font-bold text-lg hover:bg-primary/90 transition-all mt-4"
                 type="submit"
+                onclick="alert('Η αίτησή σας υποβλήθηκε!')"
               >
                 Υποβολή Αίτησης
               </button>
