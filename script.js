@@ -22,3 +22,23 @@ yearSpan.textContent = new Date().getFullYear();
       }
     });
   });
+
+//   Share button functionality
+  const shareButton = document.getElementById('shareButton');
+
+  shareButton.addEventListener('click', async () => {
+    if (navigator.share) { // Check if Web Share API is supported
+      try {
+        await navigator.share({
+          title: document.title,           // Page title
+          text: 'Check out this page!',    // Optional message
+          url: window.location.href        // Current page URL
+        });
+        console.log('Thanks for sharing!');
+      } catch (err) {
+        console.error('Error sharing:', err);
+      }
+    } else {
+      alert('Sharing not supported on this browser. Copy the URL instead!');
+    }
+  });
